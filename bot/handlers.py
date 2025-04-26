@@ -7,6 +7,7 @@ def menu_principal():
     teclado = [
         ["🎯 Line-up"],
         ["📅 Ver próximas partidas"],
+        ["🏆 Nossos titulos"],
         ["📖 Nossa história"]
     ]
     return ReplyKeyboardMarkup(teclado, resize_keyboard=True)
@@ -21,7 +22,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     reply_markup = InlineKeyboardMarkup(keyboard)
     await update.message.reply_text('Escolha uma opção:', reply_markup=reply_markup)
 
-# Função que responde aos botões inline
+# responde botoes inline
 async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
@@ -37,9 +38,9 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "se tornou uma das principais organizações de esports do Brasil.")
         await query.edit_message_text(text=f"Sobre nós:\n{resposta}")
 
-    elif query.data == 'line_up':  # Corrigido o nome do callback_data
+    elif query.data == 'line_up':
         resposta = (
-            "Line-up FURIOSA:\n\n"
+            "Line-up FURIOSA:\n"
             "KSCERATO\n"
             "Yuurih\n"
             "YEKINDAR\n"
@@ -51,13 +52,27 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         await query.edit_message_text(text=resposta)  # Responde com o line-up
 
-        # Envia o menu novamente após a resposta
+    elif query.data == 'nossos_titulos':
+        resposta = ("Nossos títulos:\n"
+                    "1. 12/03/2023 - 1st - ELisa MAsters Espoo 2023\n"
+                    "2. 12/11/2022 - 3rd-4th - IEM Rio Major 2022\n"
+                    "3. 09/04/2022 - 3rd-4th - ESL Pro League Season 15\n"
+                    "4. 04/07/2021 - 1st - Elisa Invitational Summer 2021\n"
+                    "5. 27/09/2020 - 1st ESL Pro League Season 12 NA\n"
+                    "6. 14/09/2019 - 1st Arctic Invitational 2019\n"
+                    "7. 26/07/2019 - 1st - EMF CS:GO World Invitational 2019\n"
+                    "8. 14/07/2019 - 1st - ESEA Season 31: GLobal Challenge\n"
+                    "9. 06/09/2019 - 2nd - Esports Championship Series Season 7\n"
+        )
+        await query.edit_message_text(text=resposta)  # Responde com os títulos
+
+        # Envia o menu novamente apos a resposta
         await query.message.reply_text(
             "Escolha uma opção abaixo:",
             reply_markup=menu_principal()
         )
 
-# Função que responde qualquer mensagem e envia o menu
+# responde qlqr mensagem e envia menu
 async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
     texto = update.message.text
 
@@ -68,7 +83,7 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Somos FURIA. Uma organização de esports que nasceu do desejo de representar o Brasil no CS e conquistou muito mais que isso: expandimos nossas ligas, disputamos os principais títulos, adotamos novos objetivos e ganhamos um propósito maior.\nSomos muito mais que o sucesso competitivo.\nSomos um movimento sociocultural.\nNossa história é de pioneirismo, grandes conquistas e tradição. Nosso presente é de desejo, garra e estratégia. A pantera estampada no peito estampa também nosso futuro de glória. Nossos pilares de performance, lifestyle, conteúdo, business, tecnologia e social são os principais constituintes do movimento FURIA, que representa uma unidade que respeita as individualidades e impacta positivamente os contextos em que se insere. Unimos pessoas e alimentamos sonhos dentro e fora dos jogos.")
     elif texto == "🎯 Line-up":
         resposta = (
-            "Line-up FURIOSA:\n\n"
+            "Line-up FURIOSA:\n"
             "KSCERATO\n"
             "Yuurih\n"
             "YEKINDAR\n"
@@ -78,9 +93,22 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "chelo\n"
             "skullz\n"
         )
-        await update.message.reply_text(resposta, reply_markup=menu_principal())  # Envia o menu de volta após a resposta
-    else:
-        # Se mandar qualquer outra coisa, reenvia o menu
+
+    elif texto == "🏆 Nossos titulos":
+        resposta = (
+                    "1. 12/03/2023 - 1st - ELisa MAsters Espoo 2023\n"
+                    "2. 12/11/2022 - 3rd-4th - IEM Rio Major 2022\n"
+                    "3. 09/04/2022 - 3rd-4th - ESL Pro League Season 15\n"
+                    "4. 04/07/2021 - 1st - Elisa Invitational Summer 2021\n"
+                    "5. 27/09/2020 - 1st ESL Pro League Season 12 NA\n"
+                    "6. 14/09/2019 - 1st Arctic Invitational 2019\n"
+                    "7. 26/07/2019 - 1st - EMF CS:GO World Invitational 2019\n"
+                    "8. 14/07/2019 - 1st - ESEA Season 31: GLobal Challenge\n"
+                    "9. 06/09/2019 - 2nd - Esports Championship Series Season 7\n"
+                    )    
+        await update.message.reply_text(resposta, reply_markup=menu_principal())  # menu pos resposta
+    else: 
+        # reenvia menu se digitar
         await update.message.reply_text(
             "Escolha uma opção abaixo:",
             reply_markup=menu_principal()
