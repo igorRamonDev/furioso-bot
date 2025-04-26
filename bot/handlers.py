@@ -5,6 +5,7 @@ from bot.utils import buscar_proximos_jogos
 # Teclado normal
 def menu_principal():
     teclado = [
+        ["📰 Notícias FURIA"]
         ["🎯 Line-up"],
         ["📅 Ver próximas partidas"],
         ["🏆 Nossos titulos"],
@@ -65,6 +66,10 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "9. 06/09/2019 - 2nd - Esports Championship Series Season 7\n"
         )
         await query.edit_message_text(text=resposta)  # Responde com os títulos
+
+    elif query.data == 'noticias_furia':
+        url_furia = "https://draft5.gg/equipe/330-FURIA"
+        await query.edit_message_text(text=f"Confira as últimas notícias sobre a FURIA no CS2 aqui: {url_furia}")
 
         # Envia o menu novamente apos a resposta
         await query.message.reply_text(
