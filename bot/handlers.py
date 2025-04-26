@@ -93,8 +93,8 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "chelo\n"
             "skullz\n"
         )
-
-    elif texto == "🏆 Nossos titulos":
+        await update.message.reply_text(resposta)
+    elif texto == "🏆 Nossos títulos":
         resposta = (
                     "1. 12/03/2023 - 1st - ELisa MAsters Espoo 2023\n"
                     "2. 12/11/2022 - 3rd-4th - IEM Rio Major 2022\n"
@@ -106,9 +106,9 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
                     "8. 14/07/2019 - 1st - ESEA Season 31: GLobal Challenge\n"
                     "9. 06/09/2019 - 2nd - Esports Championship Series Season 7\n"
                     )    
-        await update.message.reply_text(resposta, reply_markup=menu_principal())  # menu pos resposta
+        await update.message.reply_text(resposta, reply_markup=menu_principal())  # menu pós resposta
     else: 
-        # reenvia menu se digitar
+        # reenvia menu
         await update.message.reply_text(
             "Escolha uma opção abaixo:",
             reply_markup=menu_principal()
