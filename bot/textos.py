@@ -13,7 +13,7 @@ historia_furia = (
 )
 
 lineup_furia = (
-    "Line-up FURIOSA:\n\n"
+    "Line-up FURIOSA:\n"
     "KSCERATO\n"
     "Yuurih\n"
     "YEKINDAR\n"

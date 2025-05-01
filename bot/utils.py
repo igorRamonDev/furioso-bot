@@ -3,21 +3,17 @@ from auth import PANDA_API_TOKEN
 from datetime import datetime
 import pytz
 
-def buscar_proximos_jogos():
+def obter_jogos_furia_upcoming():
     url = "https://api.pandascore.co/csgo/matches/upcoming"
     headers = {"Authorization": f"Bearer {PANDA_API_TOKEN}"}
     response = requests.get(url, headers=headers)
 
     if response.status_code != 200:
-        return "Erro ao fazer a requisição à API"
+        return []
 
     jogos = response.json()
-
-    if not jogos:
-        return "Nenhum jogo encontrado"
-
-    jogos_info = []
     brt_timezone = pytz.timezone("America/Sao_Paulo")
+    lista = []
 
     for jogo in jogos:
         try:
@@ -26,48 +22,49 @@ def buscar_proximos_jogos():
 
             time_1 = jogo['opponents'][0]['opponent']['name']
             time_2 = jogo['opponents'][1]['opponent']['name']
-            data = jogo['scheduled_at']
-            nome_jogo = jogo['videogame']['name']
 
             if "FURIA" not in time_1.upper() and "FURIA" not in time_2.upper():
                 continue
 
-            campeonato = jogo.get('league', {}).get('name', 'Campeonato desconhecido')
-            lower_bracket = jogo.get('name', '').split(":")[0]
-
-            streams = jogo.get('streams_list', [])
-            onde_assistir = None
-            if streams:
-                for stream in streams:
-                    if stream.get('main', False):
-                        onde_assistir = stream.get('raw_url', None)
-                        break
-
-            data_utc = datetime.strptime(data, "%Y-%m-%dT%H:%M:%SZ")
+            data_utc = datetime.strptime(jogo['scheduled_at'], "%Y-%m-%dT%H:%M:%SZ")
             data_utc = pytz.utc.localize(data_utc)
             data_brt = data_utc.astimezone(brt_timezone)
 
-            data_formatada = data_brt.strftime("%d/%m/%Y %H:%M:%S")
-
-            jogo_info = f"🎮 Jogo: {nome_jogo}\n"
-            jogo_info += f"🏆 Campeonato: {campeonato} ({lower_bracket})\n"
-            jogo_info += f"🔫 {time_1} vs {time_2}\n"
-            jogo_info += f"📅 Data: {data_formatada}\n"
-
-            if onde_assistir:
-                jogo_info += f"📺 Onde assistir: {onde_assistir}\n"
-            
-            jogos_info.append(jogo_info)
-
-        except KeyError:
+            lista.append({
+                'id': jogo['id'],
+                'time_1': time_1,
+                'time_2': time_2,
+                'data': data_brt,
+                'campeonato': jogo.get('league', {}).get('name', 'Desconhecido'),
+                'nome_jogo': jogo['videogame']['name'],
+                'onde_assistir': next((s.get('raw_url') for s in jogo.get('streams_list', []) if s.get('main')), None),
+                'nome_completo': jogo.get('name', '')
+            })
+        except:
             continue
 
-    if jogos_info:
-        resultado = '\n'.join(jogos_info)
-    else:
-        resultado = "Nenhum jogo da FURIA encontrado para os proximos dias."
+    return lista
 
-    return resultado
+
+def buscar_proximos_jogos():
+    jogos = obter_jogos_furia_upcoming()
+    if not jogos:
+        return "Nenhum jogo da FURIA encontrado para os próximos dias."
+
+    jogos_info = []
+    for jogo in jogos:
+        jogo_info = (
+            f"🎮 Jogo: {jogo['nome_jogo']}\n"
+            f"🏆 Campeonato: {jogo['campeonato']} ({jogo['nome_completo'].split(':')[0]})\n"
+            f"🔫 {jogo['time_1']} vs {jogo['time_2']}\n"
+            f"📅 Data: {jogo['data'].strftime('%d/%m/%Y %H:%M:%S')}\n"
+        )
+        if jogo['onde_assistir']:
+            jogo_info += f"📺 Onde assistir: {jogo['onde_assistir']}\n"
+        jogos_info.append(jogo_info)
+
+    return '\n'.join(jogos_info)
+
 
 def buscar_ultimos_resultados():
     url = "https://api.pandascore.co/csgo/matches/past"
@@ -133,7 +130,7 @@ def buscar_ultimos_resultados():
                 break
 
         except Exception as e:
-            print("Erro ao processar o jogo: {e}")
+            print(f"Erro ao processar o jogo: {e}")
             continue
 
     if resultados_info:

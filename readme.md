@@ -31,6 +31,8 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 
 4. Configure o arquivo `auth.py`:
 
+    Crie um arquivo chamado `auth.py` e adicione seu token do Telegram e token da API Pandascore:
+
     ```python
     # auth.py
     TOKEN = 'SEU_TOKEN_DO_TELEGRAM'
@@ -50,15 +52,18 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 - [Python 3.12](https://www.python.org/)
 - [python-telegram-bot](https://python-telegram-bot.org/)
 - [Pandascore API](https://developers.pandascore.co/)
+- [APScheduler](https://apscheduler.readthedocs.io/)
+- [Requests](https://requests.readthedocs.io/)
 
 ---
 
 ## 🎯 Funcionalidades
 
-- **Botões interativos** no Telegram.
+- **Botões interativos** no Telegram para navegar pelo bot.
 - Buscar **próximos jogos** da FURIA.
-- Mostrar **resultados recentes** da FURIA.
-- Integração com a **API oficial de eSports**.
+- Exibir **resultados recentes** da FURIA.
+- Enviar **notificações** para usuários sobre jogos da FURIA, como alertas 30 minutos antes e no início das partidas.
+- **Integração com a API oficial de eSports** da Pandascore.
 
 ---
 
@@ -69,7 +74,10 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 - Opções aparecem como botões:
   - 🎯 Próximos Jogos da FURIA
   - 🏆 Resultados Recentes
+  - 📖 Nossa história
+  - 🎯 Line-up da FURIA
+  - 🔔 Ativar/Desativar notificações
 
 ---
 
-Feito com  por igorRamonDev.
+Feito com ❤️ por **igorRamonDev**.
