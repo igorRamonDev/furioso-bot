@@ -1,4 +1,4 @@
-![Furioso Bot](images/FURIOSO-BOT.png)
+![Furioso Bot](assets/imgs/FURIOSO-BOT.png)
 
 # 🦍 FURIOSO BOT
 
