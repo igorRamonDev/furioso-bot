@@ -31,7 +31,7 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 
 4. Configure o arquivo `auth.py`:
 
-    Crie um arquivo chamado `auth.py` e adicione seu token do Telegram e token da API Pandascore:
+    Crie uma pasta `config` com um arquivo chamado `auth.py` e adicione seu token do Telegram e token da API Pandascore:
 
     ```python
     # auth.py

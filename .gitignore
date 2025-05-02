@@ -1,1 +1,9 @@
 config/auth.py
+venv/
+env/
+lib/
+lib64/
+__pycache__/
+*.pyc
+bin/
+pyvenv.cfg
