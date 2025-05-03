@@ -2,7 +2,7 @@ import requests
 from config.auth import PANDA_API_TOKEN
 
 HEADERS = {"Authorization": f"Bearer {PANDA_API_TOKEN}"}
-TEAM_ID = 3246  #TESTE USANDO A HEROIC
+TEAM_ID = 124530
 
 def obter_jogos_futuros():
     url = f"https://api.pandascore.co/csgo/matches/upcoming?per_page=20"

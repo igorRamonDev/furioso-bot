@@ -6,6 +6,7 @@ from services.notificacoes import adicionar_usuario, remover_usuario
 
 def menu_principal():
     teclado = [
+        ["🐾 Modo torcedor"],
         ["🎯 Line-up"],
         ["📅 Ver próximas partidas"],
         ["✅ Últimos resultados"],
