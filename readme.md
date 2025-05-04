@@ -75,15 +75,17 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 - **Integração com a API oficial de eSports** da Pandascore.
 ---
 
-## 📷 Screenshots
+## 📷 Menu
 
 > Quando o usuário digitar `/start`:
 
 - Opções aparecem como botões:
-  - 🎯 Próximos Jogos da FURIA
-  - 🏆 Resultados Recentes
-  - 📖 Nossa história
+  - 🐾 Modo torcedor
   - 🎯 Line-up da FURIA
+  - 📅 Ver próximas partidas
+  - ✅ Últimos resultados
+  - 📰 Notícias
+  - 📖 Nossa história
   - 🔔 Ativar/Desativar notificações
 
 ---
