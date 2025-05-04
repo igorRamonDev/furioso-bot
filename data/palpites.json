@@ -1,0 +1,44 @@
+{
+    "perguntas": [
+      {
+        "pergunta": "Quem vai ganhar o primeiro round da partida?",
+        "acao": "ganhar o primeiro round"
+      },
+      {
+        "pergunta": "Quem vai ganhar o primeiro mapa?",
+        "acao": "ganhar o primeiro mapa"
+      },
+      {
+        "pergunta": "Qual time vai fazer mais kills no primeiro half?",
+        "acao": "fazer mais kills no primeiro half"
+      },
+      {
+        "pergunta": "Qual time vai vencer a partida?",
+        "acao": "vencer a partida"
+      },
+      {
+        "pergunta": "Qual time vai plantar a primeira bomba?",
+        "acao": "plantar a primeira bomba"
+      },
+      {
+        "pergunta": "Qual time fará o primeiro clutch da partida?",
+        "acao": "fazer o primeiro clutch"
+      },
+      {
+        "pergunta": "Qual equipe terá o jogador com mais kills no final da partida?",
+        "acao": "ter o jogador com mais kills"
+      },
+      {
+        "pergunta": "Quem vai vencer se a partida for para o overtime?",
+        "acao": "vencer no overtime"
+      },
+      {
+        "pergunta": "Qual time ganhará mais rounds como CT?",
+        "acao": "ganhar mais rounds como CT"
+      },
+      {
+        "pergunta": "Qual time ganhará mais rounds como T?",
+        "acao": "ganhar mais rounds como T"
+      }
+    ]
+  }

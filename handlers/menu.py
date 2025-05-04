@@ -57,6 +57,6 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("🔕 Notificações desativadas. Você não receberá mais alertas.")
     else:
         await update.message.reply_text(
-            "Bem-vindo ao bot FURIOSO! \nNosso bot exclusivo para assuntos de nossa equipe de CS2.\nPara continuar, escolha uma das opções abaixo:",
+            "🔥 FURIOSO chegou!\nO seu canal direto com tudo sobre a equipe de CS2 da FURIA.\nEscolha a sua próxima jogada e venha com a gente!",
             reply_markup=menu_principal()
         )
