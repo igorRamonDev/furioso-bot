@@ -1,0 +1,109 @@
+{
+    "perguntas": [
+      {
+        "id": 1,
+        "pergunta": "Qual jogador da FURIA é conhecido como 'kscerato'?",
+        "opcoes": ["Kaike Cerato", "Andrei Piovezan", "Yuri Santos", "Bruno Fukuda"],
+        "resposta_correta": "Kaike Cerato",
+        "curiosidade": "Kaike 'kscerato' Cerato é um dos jogadores mais consistentes da FURIA e conhecido por seu grande potencial como rifler."
+      },
+      {
+        "id": 2,
+        "pergunta": "Em que ano a FURIA Esports foi fundada?",
+        "opcoes": ["2015", "2016", "2017", "2018"],
+        "resposta_correta": "2017",
+        "curiosidade": "A FURIA foi fundada em 2017 por Jaime Pádua e André Akkari, inicialmente com foco em CS:GO."
+      },
+      {
+        "id": 3,
+        "pergunta": "Qual foi o primeiro grande torneio internacional que a FURIA chegou à final?",
+        "opcoes": ["ESL One Cologne", "DreamHack Masters Dallas", "BLAST Pro Series", "IEM Katowice"],
+        "resposta_correta": "DreamHack Masters Dallas",
+        "curiosidade": "A FURIA surpreendeu o mundo ao chegar à final da DreamHack Masters Dallas 2019, perdendo apenas para Team Liquid na grande decisão."
+      },
+      {
+        "id": 4,
+        "pergunta": "Quem é o jogador que atua como AWPer principal da FURIA?",
+        "opcoes": ["arT", "VINI", "drop", "yuurih"],
+        "resposta_correta": "arT",
+        "curiosidade": "Andrei 'arT' Piovezan é conhecido por seu estilo agressivo e não convencional como AWPer e capitão da equipe."
+      },
+      {
+        "id": 5,
+        "pergunta": "Qual jogador brasileiro se juntou à FURIA em 2023 vindo da paiN Gaming?",
+        "opcoes": ["saffee", "drop", "chelo", "exit"],
+        "resposta_correta": "exit",
+        "curiosidade": "Ricardo 'exit' Dornelles se juntou à FURIA em 2023 para fortalecer o elenco de CS:GO da equipe."
+      },
+      {
+        "id": 6,
+        "pergunta": "Qual é a nacionalidade da maioria dos jogadores da FURIA?",
+        "opcoes": ["Argentina", "Brasil", "Colômbia", "Chile"],
+        "resposta_correta": "Brasil",
+        "curiosidade": "A FURIA é uma organização brasileira e sua equipe principal de CS:GO é composta majoritariamente por jogadores brasileiros."
+      },
+      {
+        "id": 7,
+        "pergunta": "Em qual mapa a FURIA costuma ter um estilo de jogo mais agressivo e característico?",
+        "opcoes": ["Mirage", "Nuke", "Vertigo", "Inferno"],
+        "resposta_correta": "Vertigo",
+        "curiosidade": "A FURIA desenvolveu um estilo único e agressivo no mapa Vertigo, tornando-o um de seus mapas signature."
+      },
+      {
+        "id": 8,
+        "pergunta": "Qual a cor predominante no uniforme da FURIA?",
+        "opcoes": ["Azul", "Verde", "Vermelho", "Preto"],
+        "resposta_correta": "Preto",
+        "curiosidade": "O uniforme da FURIA é predominantemente preto com detalhes em branco, representando as cores da organização."
+      },
+      {
+        "id": 9,
+        "pergunta": "Qual destes jogadores atuou como coach da FURIA?",
+        "opcoes": ["fallen", "zews", "guerri", "dead"],
+        "resposta_correta": "guerri",
+        "curiosidade": "Nicholas 'guerri' Nogueira foi coach da FURIA por vários anos, sendo peça importante no desenvolvimento da equipe."
+      },
+      {
+        "id": 10,
+        "pergunta": "Qual jogador é considerado a estrela da FURIA e um dos melhores do mundo?",
+        "opcoes": ["VINI", "kscerato", "arT", "drop"],
+        "resposta_correta": "kscerato",
+        "curiosidade": "Kaike 'kscerato' Cerato é frequentemente apontado como um dos melhores jogadores do mundo e a estrela da FURIA."
+      },
+      {
+        "id": 11,
+        "pergunta": "Qual animal representa o símbolo da FURIA?",
+        "opcoes": ["Leão", "Lobo", "Pantera", "Águia"],
+        "resposta_correta": "Pantera",
+        "curiosidade": "A pantera negra é o símbolo da FURIA, representando força, agilidade e fúria."
+      },
+      {
+        "id": 12,
+        "pergunta": "Em qual torneio a FURIA conseguiu sua primeira vitória significativa contra a Astralis?",
+        "opcoes": ["ESL Pro League", "BLAST Premier", "IEM Katowice", "DreamHack Open"],
+        "resposta_correta": "BLAST Premier",
+        "curiosidade": "A FURIA conseguiu uma vitória histórica contra a Astralis na BLAST Premier Spring 2020, marcando uma virada importante para a equipe."
+      },
+      {
+        "id": 13,
+        "pergunta": "Qual jogador já recebeu o apelido de 'the headshot machine' na FURIA?",
+        "opcoes": ["arT", "kscerato", "yuurih", "VINI"],
+        "resposta_correta": "yuurih",
+        "curiosidade": "Yuri 'yuurih' Santos é conhecido por sua precisão impressionante e por isso recebeu esse apelido da comunidade."
+      },
+      {
+        "id": 14,
+        "pergunta": "Qual foi a melhor posição da FURIA no ranking mundial de CS:GO?",
+        "opcoes": ["1º lugar", "2º lugar", "3º lugar", "5º lugar"],
+        "resposta_correta": "5º lugar",
+        "curiosidade": "A FURIA alcançou a 5ª posição no ranking mundial da HLTV em junho de 2020, seu melhor resultado até então."
+      },
+      {
+        "id": 15,
+        "pergunta": "Qual destes patrocinadores já apoiou a FURIA?",
+        "opcoes": ["Red Bull", "Monster Energy", "Nike", "Adidas"],
+        "resposta_correta": "Nike",
+        "curiosidade": "A FURIA fechou uma parceria histórica com a Nike em 2019, sendo uma das primeiras organizações de esports a ter a marca como patrocinadora."
+      }
+    ]
+  }
