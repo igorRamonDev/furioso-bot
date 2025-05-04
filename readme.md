@@ -59,12 +59,20 @@ Bot do Telegram para acompanhar **próximos jogos** e **resultados recentes** da
 
 ## 🎯 Funcionalidades
 
-- **Botões interativos** no Telegram para navegar pelo bot.
-- Buscar **próximos jogos** da FURIA.
+- **Botões interativos** para fácil navegação entre todas as funções do bot.
+- **Modo torcedor** uma experiência personalizada para quem vive e respira FURIA.
+    - **Quiz interativo**: desafie seus conhecimentos sobre a FURIA e acumule pontos de torcedor raiz.
+    - **Palpites dos jogos**: dê seu chute e veja se você manja mesmo de FURIA!
+    - **Melhores momentos**: veja os melhores momentos da última partida.
+- Exibir **line-up** da FURIA.
+- Buscar **próximas partidas** da FURIA.
 - Exibir **resultados recentes** da FURIA.
-- Enviar **notificações** para usuários sobre jogos da FURIA, como alertas 30 minutos antes e no início das partidas.
+- Exibir **notícias** da FURIA.
+- Exibir **história** da FURIA.
+- Enviar **notificações inteligentes** para os torcedores da FURIA.
+    - 2h, 1h, 30 min antes das partidas.
+    - Alerta automático assim que a partida começar.
 - **Integração com a API oficial de eSports** da Pandascore.
-
 ---
 
 ## 📷 Screenshots
